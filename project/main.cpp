@@ -22,6 +22,8 @@ SDL_Window* gWindow = NULL;
 SDL_Renderer* gRenderer = NULL;
 LTexture BgSpriteSheetTexture;
 LTexture peopleSpriteSheetTexture;
+LTexture Truck;
+
 
 bool init();
 bool loadMedia();
@@ -29,7 +31,7 @@ void close();
 
 int main( int argc, char* args[] )
 {
-<<<<<<< HEAD
+
 
 
     //Start up SDL and create window
@@ -110,10 +112,7 @@ int main( int argc, char* args[] )
     }
 
 
-=======
-    cout << "Hello world!" << endl;
-    cout << "Hunain bachod";
->>>>>>> c7aa5db9c5d6346aaf91d16861fdc6a6dfc440f6
+
     return 0;
 
 }
@@ -184,6 +183,11 @@ bool loadMedia()
         success = false;
     }
     if( !peopleSpriteSheetTexture.LoadFromFile( "Images/characters.png", gRenderer  ) )
+    {
+        printf( "Failed to load sprite sheet texture!\n" );
+        success = false;
+    }
+    if( !Truck.LoadFromFile( "Images/characters.png", gRenderer  ) )
     {
         printf( "Failed to load sprite sheet texture!\n" );
         success = false;

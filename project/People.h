@@ -28,6 +28,7 @@ class People
         SDL_Rect character2[12];
         SDL_Rect character3[12];
         SDL_Rect character4[12];
+
         LTexture* spriteSheetTexture;
 };
 

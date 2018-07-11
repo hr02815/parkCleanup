@@ -8,7 +8,7 @@
 	<stdio.h>
 	<iostream>
 
-1531249168 source:c:\users\hunain\documents\github\parkcleanup\project\main.cpp
+1531304793 source:c:\users\hunain\documents\github\parkcleanup\project\main.cpp
 	<SDL.h>
 	<SDL_image.h>
 	<stdio.h>
@@ -20,7 +20,7 @@
 1531247854 c:\users\hunain\documents\github\parkcleanup\project\people.h
 	"LTexture.h"
 
-1531249665 source:c:\users\hunain\documents\github\parkcleanup\project\people.cpp
+1531304900 source:c:\users\hunain\documents\github\parkcleanup\project\people.cpp
 	"People.h"
 	<stdlib.h>
 

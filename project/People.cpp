@@ -97,7 +97,7 @@ selectClip % 3
     if(direction == LEFT)
         spriteSheetTexture -> Render( x, y, width, height, &character1[selectClip % 3 + 3], 0.0, NULL, SDL_FLIP_NONE, gRenderer);
     if(direction == UP)
-        spriteSheetTexture -> Render( x, y, width, height, &character1[selectClip % 3 + 9], 0.0, NULL, SDL_FLIP_NONE, gRenderer);
+        spriteSheetTexture -> Render( x, y, width, height, &character1[selectClip % 1 + 9], 0.0, NULL, SDL_FLIP_NONE, gRenderer);
     if(direction == DOWN)
         spriteSheetTexture -> Render( x, y, width, height, &character1[selectClip % 3], 0.0, NULL, SDL_FLIP_NONE, gRenderer);
 
