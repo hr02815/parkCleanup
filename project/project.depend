@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1531240288 source:c:\users\hunain\documents\github\parkcleanup\project\ltexture.cpp
+	"LTexture.h"
+
+1531206972 c:\users\hunain\documents\github\parkcleanup\project\ltexture.h
+	<SDL.h>
+	<SDL_image.h>
+	<stdio.h>
+	<iostream>
+
+1531249168 source:c:\users\hunain\documents\github\parkcleanup\project\main.cpp
+	<SDL.h>
+	<SDL_image.h>
+	<stdio.h>
+	<iostream>
+	<stdlib.h>
+	<time.h>
+	"People.h"
+
+1531247854 c:\users\hunain\documents\github\parkcleanup\project\people.h
+	"LTexture.h"
+
+1531249665 source:c:\users\hunain\documents\github\parkcleanup\project\people.cpp
+	"People.h"
+	<stdlib.h>
+
+1531252406 source:c:\users\hunain\documents\github\parkcleanup\project\queue.cpp
+	"Queue.h"
+	<iostream>
+
+1531252363 c:\users\hunain\documents\github\parkcleanup\project\queue.h
+	"Node.h"
+
+1531252376 c:\users\hunain\documents\github\parkcleanup\project\node.h
+	"People.h"
+
