@@ -5,14 +5,15 @@
 #include <stdlib.h>
 #include <time.h>
 //#include"LTexture.h"
-#include "People.h"
+#include "Queue.h"
 //#include "Button.h"
+#include "TrashCan.h"
 
 using namespace std;
 
 //Pre defined screen width and height
-const int SCREEN_WIDTH = 800;
-const int SCREEN_HEIGHT = 600;
+//const int SCREEN_WIDTH = 800;
+//const int SCREEN_HEIGHT = 600;
 
 bool init();
 bool loadMedia();
@@ -22,7 +23,9 @@ SDL_Window* gWindow = NULL;
 SDL_Renderer* gRenderer = NULL;
 LTexture BgSpriteSheetTexture;
 LTexture peopleSpriteSheetTexture;
-LTexture Truck;
+LTexture truckSpriteSheetTexture;
+LTexture trashCanSpriteSheetTexture;
+
 
 
 bool init();
@@ -61,25 +64,46 @@ int main( int argc, char* args[] )
             int w = 385 - 210;
             int h = 168 - 9;
             SDL_Rect background = {x, y, w, h};
-            //SDL_Rect character = {0, 0, 30, 30};
+            SDL_Rect character = {30, 90, 30, 30};
 
 
             BgSpriteSheetTexture.Render(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, &background, 0.0, NULL, SDL_FLIP_NONE, gRenderer);
             //peopleSpriteSheetTexture.Render(15, 15, 30, 30, &character, 0.0, NULL, SDL_FLIP_NONE, gRenderer);
-            People p(&peopleSpriteSheetTexture, 700, SCREEN_HEIGHT/2);
+            Queue q;
+            //Unit* p = new People(&peopleSpriteSheetTexture);
+            //p.SetDirection(RIGHT);
+           // q.Enqueue(p);
+            //Unit* p1 = new People(&peopleSpriteSheetTexture);
+            //q.Enqueue(p1);
+
+            Unit* t = new Truck(&truckSpriteSheetTexture);
+
+            TrashCan c(&trashCanSpriteSheetTexture, SCREEN_WIDTH/2, SCREEN_HEIGHT/2);
+
+            t->SetDestination(c.GetX(), c.GetY());
+
+            q.Enqueue(t);
+
+
+
+
+            //p.Render(frame, gRenderer, false);
 
             while( !quit )                          //While application is running
             {
-                if(frame % 20 == 0)
+                if(frame % 1 == 0)
                 {
-                    cout<<frame<<endl;
+
+                    //cout<<frame<<endl;
                     SDL_SetRenderDrawColor( gRenderer, 0xFF, 0xFF, 0xFF, 0xFF );    //Clear screen
                     SDL_RenderClear( gRenderer );
                     BgSpriteSheetTexture.Render(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, &background, 0.0, NULL, SDL_FLIP_NONE, gRenderer);
 
-                    p.Move();
-                    p.Render(frame, gRenderer, false);
+                    q.Move();
+                    q.Render(frame, gRenderer, true);
+                    c.Render(frame, gRenderer, true);
                     SDL_RenderPresent( gRenderer );
+
                 }
                 while( SDL_PollEvent( &e ) != 0 )   //Handle events on queue
                 {
@@ -100,7 +124,7 @@ int main( int argc, char* args[] )
 
                 }
                 SDL_RenderPresent( gRenderer );
-                cout<<frame<<endl;
+                //cout<<frame<<endl;
                 frame++;
 
             }
@@ -187,11 +211,17 @@ bool loadMedia()
         printf( "Failed to load sprite sheet texture!\n" );
         success = false;
     }
-    if( !Truck.LoadFromFile( "Images/characters.png", gRenderer  ) )
+    if( !truckSpriteSheetTexture.LoadFromFile( "Images/truck.png", gRenderer  ) )
     {
         printf( "Failed to load sprite sheet texture!\n" );
         success = false;
     }
+    if( !trashCanSpriteSheetTexture.LoadFromFile( "Images/TrashCan.png", gRenderer  ) )
+    {
+        printf( "Failed to load sprite sheet texture!\n" );
+        success = false;
+    }
+
 
     return success;
 }
@@ -201,6 +231,8 @@ void close()
     //Free loaded images
     BgSpriteSheetTexture.Free();
     peopleSpriteSheetTexture.Free();
+    truckSpriteSheetTexture.Free();
+    trashCanSpriteSheetTexture.Free();
 
     //Destroy window
     SDL_DestroyRenderer( gRenderer );

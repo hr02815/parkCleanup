@@ -1,5 +1,7 @@
 #include"LTexture.h"
 
+
+
 LTexture::LTexture()
 {
     texture = NULL;

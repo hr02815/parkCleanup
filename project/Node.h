@@ -1,14 +1,16 @@
 #pragma once
 #include "People.h"
+#include "Truck.h"
+
 
 struct Node
 {
-    People* people;
+    Unit* unit;
     Node* next;
     Node* prev;
 
     ~Node()
     {
-        delete people;
+        delete unit;
     }
 };

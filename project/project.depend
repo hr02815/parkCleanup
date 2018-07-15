@@ -1,36 +1,65 @@
 # depslib dependency file v1.0
-1531240288 source:c:\users\hunain\documents\github\parkcleanup\project\ltexture.cpp
+1531370610 source:c:\users\hunain\documents\github\parkcleanup\project\ltexture.cpp
 	"LTexture.h"
 
-1531206972 c:\users\hunain\documents\github\parkcleanup\project\ltexture.h
+1531370610 c:\users\hunain\documents\github\parkcleanup\project\ltexture.h
 	<SDL.h>
 	<SDL_image.h>
 	<stdio.h>
 	<iostream>
 
-1531304793 source:c:\users\hunain\documents\github\parkcleanup\project\main.cpp
+1531631624 source:c:\users\hunain\documents\github\parkcleanup\project\main.cpp
 	<SDL.h>
 	<SDL_image.h>
 	<stdio.h>
 	<iostream>
 	<stdlib.h>
 	<time.h>
-	"People.h"
+	"Queue.h"
+	"TrashCan.h"
 
-1531247854 c:\users\hunain\documents\github\parkcleanup\project\people.h
+1531625229 c:\users\hunain\documents\github\parkcleanup\project\people.h
 	"LTexture.h"
+	"Unit.h"
 
-1531304900 source:c:\users\hunain\documents\github\parkcleanup\project\people.cpp
+1531602605 source:c:\users\hunain\documents\github\parkcleanup\project\people.cpp
 	"People.h"
-	<stdlib.h>
 
-1531252406 source:c:\users\hunain\documents\github\parkcleanup\project\queue.cpp
+1531510452 source:c:\users\hunain\documents\github\parkcleanup\project\queue.cpp
 	"Queue.h"
 	<iostream>
 
-1531252363 c:\users\hunain\documents\github\parkcleanup\project\queue.h
+1531510363 c:\users\hunain\documents\github\parkcleanup\project\queue.h
 	"Node.h"
 
-1531252376 c:\users\hunain\documents\github\parkcleanup\project\node.h
+1531603502 c:\users\hunain\documents\github\parkcleanup\project\node.h
 	"People.h"
+	"Truck.h"
+
+1531591310 source:c:\users\hunain\documents\github\parkcleanup\project\unit.cpp
+	"Unit.h"
+
+1531630937 c:\users\hunain\documents\github\parkcleanup\project\unit.h
+	<SDL.h>
+	<SDL_image.h>
+	<stdio.h>
+	<stdlib.h>
+	<iostream>
+	"LTexture.h"
+	"Point.h"
+	"math.h"
+
+1531632450 source:c:\users\hunain\documents\github\parkcleanup\project\truck.cpp
+	"Truck.h"
+
+1531603566 c:\users\hunain\documents\github\parkcleanup\project\truck.h
+	"Unit.h"
+
+1530677619 c:\users\hunain\documents\github\parkcleanup\project\point.h
+
+1531631624 source:c:\users\hunain\documents\github\parkcleanup\project\trashcan.cpp
+	"TrashCan.h"
+
+1531631182 c:\users\hunain\documents\github\parkcleanup\project\trashcan.h
+	"Unit.h"
 

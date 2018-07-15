@@ -42,6 +42,12 @@
 		<Unit filename="Point.h" />
 		<Unit filename="Queue.cpp" />
 		<Unit filename="Queue.h" />
+		<Unit filename="TrashCan.cpp" />
+		<Unit filename="TrashCan.h" />
+		<Unit filename="Truck.cpp" />
+		<Unit filename="Truck.h" />
+		<Unit filename="Unit.cpp" />
+		<Unit filename="Unit.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

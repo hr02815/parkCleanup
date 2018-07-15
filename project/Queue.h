@@ -9,7 +9,7 @@ private:
 public:
     Queue();
     ~Queue();
-    void Enqueue(People*);
+    void Enqueue(Unit*);
     void Clean();
     void Render(long int& frame, SDL_Renderer* gRenderer, bool debug);
     void Move();
